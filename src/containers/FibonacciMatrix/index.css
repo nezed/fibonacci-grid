@@ -1,0 +1,5 @@
+.FibonacciMatrix-settings {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0.5em 2em 0.5em;
+}

@@ -1,0 +1,44 @@
+.MatrixCell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: max(min(1.5vh, 18px), 8px);
+  width: 2em;
+  height: 2em;
+
+  user-select: none;
+  cursor: pointer;
+}
+
+.MatrixCell-text {
+  border-radius: 33.33%;
+  display: inline-flex;
+  width: inherit;
+  height: inherit;
+  border-radius: 33.33%;
+  justify-content: center;
+  align-items: center;
+}
+
+.MatrixCell._change .MatrixCell-text {
+  --target-color: hsl(59, 100%, 73%);
+  animation: 2s ease-out 0s single-flash;
+}
+.MatrixCell._fib .MatrixCell-text {
+  --target-color: hsl(105, 100%, 73%);
+  animation: 2s ease-out 0s single-flash;
+}
+
+
+@keyframes single-flash {
+  0% {
+    background: transparent;
+  }
+  10% {
+    background: var(--target-color);
+  }
+  100% {
+    background: transparent;
+  }
+}

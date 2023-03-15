@@ -1,0 +1,14 @@
+.MatrixGrid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+
+  border-width: 1px 1px 0 0;
+}
+
+.MatrixGrid,
+.MatrixGrid .MatrixCell {
+  border: 0 solid hsl(0deg 0% 94%);
+}
+.MatrixGrid .MatrixCell {
+  border-width: 0 0 1px 1px;
+}
